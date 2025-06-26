@@ -648,7 +648,11 @@
       } else {
         setTimeout(() => {
           document.getElementById('challenge').innerText = `Round complete! Final score: ${score}/${currentRound.length}`;
-          hideAllQuizElements();
+          document.getElementById('reveal-section').classList.add('hidden');
+          document.getElementById('choices-container').classList.add('hidden');
+          document.getElementById('repeat-section').classList.add('hidden');
+          document.getElementById('result').innerText = '';
+          // Keep scoreEl visible - don't clear it
         }, 2000);
       }
     });
